@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/StudentInterface.css">
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="box">
+            <form class="row g-3" action="/api/studentinfosubmit" method="POST" enctype="multipart/form-data">
+                <div class="col-md-12 headingbox">
+                    <div class=" headingtext">
+                        <img src="/static/mitslogo.jpeg" class="logo" />
+                        Add Your Information
+                    </div>
+                </div>
+                <div class="col-md-6 headingtext1">
+                    <label for="enrollmentid" class="form-label"><b>Enrollment Number</b></label>
+                    <input type="text" name="enrollmentid" class="form-control" placeholder="Enrollment Number" id="enrollmentid" required>
+                </div>
+                <div class="col-md-6 headingtext1">
+                    <label for="studentname" class="form-label"><b>Student Name</b></label>
+                    <input type="text" name="studentname" class="form-control" placeholder="Student Name" id="studentname" required>
+                </div>
+                <div class="col-md-6 headingtext1">
+                    <label for="batchyear" class="form-label"><b>Batch Year</b></label>
+                    <select type="text" name="batchyear" class="form-select" id="batchyear" required>
+                        <option>Select Batch Year</option>
+                        <option> 2020</option>
+                        <option> 2021</option>
+                        <option> 2022</option>
+                        <option> 2023</option>
+                        <option> 2024</option>
+                        <option> 2025</option>
+                        <option> 2026</option>
+                        <option> 2027</option>
+                        <option> 2028</option>
+                        <option>2029</option>
+                        <option>2030</option>
+                        <option>2031</option>
+                    </select>
+                </div>
+                <div class="col-md-6 headingtext1">
+                    <label for="email" class="form-label"><b>Student Email</b></label>
+                    <input type="text" name="email" class="form-control" placeholder="Email" id="email" required>
+                </div>
+                <div class="col-md-6 headingtext1">
+                    <label for="contactno" class="form-label"><b>Contact Number</b></label>
+                    <input type="text" name="contactno" class="form-control" placeholder="Enter Contect Number" id="contactno" required>
+                </div>
+                <div class="col-md-6 headingtext1">
+                    <label for="studentstatus" class="form-label"><b>Student Status</b></label>
+                    <select type="text" name="studentstatus" class="form-select" id="studentstatus" required>
+                        <option>Select Student Status</option>
+                        <option> Regular</option>
+                        <option> Ex</option>
+                    </select>
+                </div>
+                <div class="col-md-6 headingtext1">
+                    <label for="studentsem" class="form-label"><b>Student Semester</b></label>
+                    <select type="text" name="studentsem" class="form-select" id="studentsem" required>
+                        <option>Select Student Semester</option>
+                        <option> 1</option>
+                        <option> 2</option>
+                        <option> 3</option>
+                        <option> 4</option>
+                        <option> 5</option>
+                        <option> 6</option>
+                        <option> 7</option>
+                        <option> 8</option>
+                    </select>
+                </div>
+                <div class="btndiv">
+                    <div class="col-md-6 btnclass">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                    <div class="col-md-6 btnclass">
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+                <div class="col-md-12 messagetext">
+                    <span style="font-weight: bold;">{{message}}</b></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
