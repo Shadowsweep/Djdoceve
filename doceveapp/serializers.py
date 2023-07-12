@@ -8,6 +8,7 @@ from doceveapp.models import AssignmentSubmissionStudent
 from doceveapp.models import AssignmentSubmissionTeacher
 from doceveapp.models import Administrator
 
+
 class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teachers
@@ -32,7 +33,7 @@ class DocumentSerializer(serializers.ModelSerializer):
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ('enrollmentid','studentname','batchyear','email','contactno','studentstatus','studentsem','password')
+        fields = ('enrollmentid','studentname','batchyear','email','contactno','studentstatus','studentsem','password','currentstatus')
 
 class AssignmentSubmissionStudentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -48,3 +49,4 @@ class AdministratorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Administrator
         fields = ('id','adminname','mobileno','emailid','password')
+

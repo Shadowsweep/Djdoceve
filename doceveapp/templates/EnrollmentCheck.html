@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/StudentInterface.css">
+</head>
+
+<body>
+
+       
+     
+
+    <div class="maincontainer">
+        <div class="box">
+            <form class="row g-3" action="/api/studentenrollmentcheck" method="GET" >
+                <!-- <input type="hidden" name="enrollmentid" value="{{data.enrollmentid}}"/> -->
+                
+                <div class="col-md-6 headingtext1">
+                    <label for="enrollmentid" class="form-label"><b>Enter Enrollment Number*</b></label>
+                    <input type="text" name="enrollmentid" class="form-control" placeholder="Enrollment Number" id="enrollmentid" required>
+                </div>   
+                <div class="btndiv">
+                    <div class="col-md-6 btnclass">
+                        <button style="width: 75%;" name="btn" value="CHECK" type="submit"  class="btn btn-primary labelstyle">Check</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+       
+        
+            // const usedEnrollmentNumbers =  data.toString()  ;
+
+//         const usedEnrollmentNumbers = ["0901MC211064"] ;
+//   const enrollmentInput = document.getElementById("enrollmentid");
+
+//   enrollmentInput.addEventListener("input", function() {
+//     const enrollmentNumber = enrollmentInput.value;
+//     if (usedEnrollmentNumbers.includes(enrollmentNumber)) {
+//       enrollmentInput.value = ""; // Clear the input field
+//       alert("Enrollment number is already used.");
+//       enrollmentInput.disabled = false; // Disable input field
+//     } else {
+//       enrollmentInput.disabled = false; // Enable input field
+//     }
+//   });
+//   const spawner = require('child_process').spawn;
+        
+//         const data_to_pass_in = 'python hai mere bhai';
+        
+//         console.log('Data sent to python script',data_to_pass_in);
+//         const python_process = spawner('python',['./student_view.py',data_to_pass_in]);
+        
+//         python_process.stdout.on('data',(data) => {
+//             console.log('Data recieved from python sccript:',data.toString());
+        
+//         })
+
+
+// const usedEnrollmentNumbers = JSON.stringify(data); // Convert data to string using JSON.stringify
+// function someOtherFunction() {
+    // Example usage of ids outside the function
+   
+// const usedEnrollmentNumbers = ids
+const usedEnrollmentNumbers = ["0901MC211064"]
+  const enrollmentInput = document.getElementById("enrollmentid");
+
+  enrollmentInput.addEventListener("input", function() {
+    const enrollmentNumber = enrollmentInput.value;
+    if (usedEnrollmentNumbers.includes(enrollmentNumber)) {
+      enrollmentInput.value = ""; // Clear the input field
+      alert("Enrollment number is already used.");
+      enrollmentInput.disabled = false; // Disable input field
+    } else {
+      enrollmentInput.disabled = false; // Enable input field
+    }
+  });
+  console.log(ids);
+  
+
+  
+  const spawner = require('child_process').spawn;
+
+  const data_to_pass_in = 'PYTHON DATA';
+
+  console.log('Data sent to python script', data_to_pass_in);
+  const python_process = spawner('python', ['./student_view.py', data_to_pass_in]);
+
+  let ids; // Declare the variable outside the function
+
+  python_process.stdout.on('data', (data) => {
+    console.log('Data received from python script:', data.toString());
+    ids = data.toString(); // Assign the value to ids variable
+    console.log(ids);
+    // Use ids as needed
+    someOtherFunction(); // Example call to another function using ids
+  });
+
+  function someOtherFunction() {
+    // Example usage of ids outside the function
+    console.log(ids);
+  }
+
+
+
+//   const data_to_pass_in = 'python hai mere bhai';
+
+//   console.log('Data sent to python script', data_to_pass_in);
+//   const python_process = spawn('python', ['./student_view.py', data_to_pass_in]);
+
+
+
+</script>
+</body>
+
+</html>

@@ -42,7 +42,7 @@ class Document(models.Model):
     
 class Student(models.Model):
     # enrollmentid = models.AutoField(primary_key=True,editable=False)
-    enrollment_id = models.CharField(max_length=70,blank=False,default='',primary_key=True)
+    enrollmentid = models.CharField(max_length=70,blank=False,default='',primary_key=True)
     studentname = models.CharField(max_length=150,blank=False,default='')
     batchyear = models.CharField(max_length=70,blank=False,default='')
     email = models.CharField(max_length=150,blank=False,default='')
@@ -50,6 +50,7 @@ class Student(models.Model):
     studentstatus = models.CharField(max_length=70,blank=False,default='')
     studentsem = models.CharField(max_length=70,blank=False,default='')
     password = models.CharField(max_length=150, blank=False,default='')
+    currentstatus = models.CharField(max_length=70,blank=False,default='')
 
 
 class AssignmentSubmissionStudent(models.Model):
@@ -75,4 +76,5 @@ class Administrator(models.Model):
     mobileno = models.CharField(max_length=150, blank=False,default='')
     emailid = models.CharField(max_length=150, blank=False,default='')
     password = models.CharField(max_length=150, blank=False,default='')
+
 
